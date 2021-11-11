@@ -7,12 +7,32 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">Yurier列表·Yurier List</div>
   <script>
     window.$docsify = {
-      //...
+     loadSidebar: true,
+     maxLevel: 4,
+     loadNavbar: true,
+     search: 'auto',
+     plugins:[EditOnGithubPlugin.create(docBase, docEditBase, title)]
+     pagination: { previousText: '上一页', nextText: '下一页', crossChapter: true, crossChapterText: true, },
+     repo: 'YurierDept/YurierList',
+     subMaxLevel: 2,
+     auto2top: true,
+     name: 'Yurier列表',
+     themeColor: '#4a86e8',
+     autoHeader: true,
+     mergeNavbar: true,
+     formatUpdated: '{MM}/{DD} {HH}:{mm}',
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<script> if (typeof navigator.serviceWorker !== 'undefined') { navigator.serviceWorker.register('sw.js') } </script>
 </body>
 </html>
